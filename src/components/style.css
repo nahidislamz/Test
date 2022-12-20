@@ -1,0 +1,135 @@
+.dark-theme{
+  background-color: rgb(9, 4, 29);
+  color: #fff;
+}
+.light-theme{
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.849);
+}
+
+.btn{
+  margin-top: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size:18px;
+    cursor: pointer;
+    z-index: 0;
+    position: relative;
+    z-index: 0;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+
+
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 500%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-btn 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-btn {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+
+.btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  .btn-dark{
+    background-color: #000;
+    color: #fff;
+  }
+
+  .btn-light{
+    background-color: #fff;
+    color: #000;
+  }
+ 
+  
+
+
+  .btn-rainbow{
+    margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size:18px;
+      cursor: pointer;
+      z-index: 0;
+      position: relative;
+      z-index: 0;
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+
+  }
+  
+  .btn-rainbow::before{
+      content: "";
+      background-image: linear-gradient(45deg,
+      red,yellow,orange,green,skyblue,blue,purple,red);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 500%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-btn 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+  }
+  
+  @keyframes glowing-btn {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+  }
+  
+  .btn-rainbow:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+  
